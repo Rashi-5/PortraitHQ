@@ -1,0 +1,154 @@
+
+<html>
+	<head>
+		<title> Portrait HQ-Home
+		</title>
+		<link rel='stylesheet' type='text/css' href='css/external1.css'>
+		<link rel='stylesheet' type='text/css' href='css/main.css'>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+	<!--navigation bar -->
+		<div id='menu'>
+			<div id="menudiv">
+				<ul>
+					<li class='active' ><a href="main.html">HOME</a></li>
+					<li class='menu'><a href="store.html">STORE</a></li>
+					<li class='menu'><a href="album.html">GALLERY</a></li>
+					<li class='menu'><a href="sitemap.html">SITEMAP</a></li>
+					<li class='menu'><a href="#contact">CONTACT	</a></li>
+				</ul>
+				<img src="images/logo2.png" id="logo" alt="logo-portraitHQ">
+			</div>
+		</div>
+	<!-- style boxes -->
+		<div id="divbox">
+		</div>
+		
+		<div id="divimg">
+			<img src="images/newhome.jpg" id="bg" alt="background-image">
+		</div>
+		
+		<div id="divtext">
+			<div id="text">
+			READY. <br> AIM. <br> FIRE.
+			</div>
+		</div>
+		
+		<div id="pattern">
+			<img src="images/png1.png" id="patternimg1">
+		</div>
+	<!-- social media icons -->
+		<div id="social">
+			<ol>
+				<a href="https://www.facebook.com/">
+				<li> <img src="images/facebook1.png" class="media" alt="facebook"> </li> </a>
+				<a href="https://www.instagram.com">
+				<li> <img src="images/insta.png" class="media" alt="instagram"> </li> </a>
+				<a href="https://www.pinterest.com">
+				<li> <img src="images/pinterest.png" class="media" alt="pinterest"> </li> </a>
+				
+			</ol>
+		</div>
+		
+			<a href="album.html">
+			<button type="button" id="gallerybtn"> SEE MORE 
+			<img src="images/arrow.png" alt="seemore" id="arrow"> 
+			</button> </a>
+			
+				<div id="gallery">
+					
+						 <img src="images/img1.jpg" id="galleryimg" alt="#gallery" style="left:5%;"> 
+						 <img src="images/img2.jpg" id="galleryimg" alt="#gallery" style="left:27%;"> 
+						 <img src="images/img3.jpg" id="galleryimg" alt="#gallery" style="left:49%;">  
+						 <img src="images/img4.jpg" id="galleryimg" alt="#gallery" style="left:71%;"> 
+					
+				</div>
+		
+		<div id="patterns">
+			<img src="images/png.png" id="patternimg2">
+		</div>
+		
+		<div id="service">
+			<p> #GET SPECIAL OFFERS. <p>
+		</div>
+		
+		<div id="shop">
+			<img src="images/quiz3.png" id="quiz" alt="quiz">
+			<p color="black" style="left:44%;top:14%"> SCORE  <span id="max">  MAX </span> <br> GET  <br><br> OFFERS. </p>
+			
+			<a href="portraitHQ-quiz.html">
+			<button type="button" id="quizbtn"> GO TO QUIZ  
+			<img src="images/arrow.png" alt="seemore" id="arrow"> 			
+			</button> </a>
+		</div>
+
+		<div id="para">
+			<p style="color:black; text-align:center; font-size:2vw">  <span id="quote">   <b> PORTRAIT HEADQUARTERS </b>  </span> <br> 
+			<br> A portrait,<br>"is not made in the camera but on either side of it."
+			<br> <br> -Edward Steichen </p> 
+		</div>
+		
+		<div id="contact">
+			<div id="detail">
+				<form>
+					<p id="con"> CONTACT </p>
+					<label for="name"> <span id="fname">  Name </span> </label>
+					<input type="text" id="name" placeholder=" Name " name="name" required>
+				
+					<label for="email"> <span id="mail"> Email </span> </label>
+					<input type="text" id="email" placeholder=" Email " name="email" required>
+				
+					<label for="comment"> <span id="comment"> Message </span> </label>
+					<input type="text" id="comments" placeholder=" Your Comments... " name="comment" required>
+				</form>
+			</div>
+			<div id="rate">
+				<a href=""> <label for="more" id="more"> VIEW MORE </label> <img src="images/arrow1.png" alt="seemore" id="arrow1">  </a>
+				<label for="rating"> <span id="rating"> How well is this page working for you? </span> </label>
+				<ol>
+					<li> <label class="rbtn">  <input type="radio" name="rates" value="Poor"> </input> </span> <span id="ratings"> Poor  </label> </li>
+					<li> <label class="rbtn">  <input type="radio" name="rates" value="Average"> </input>  <span id="ratings"> Average </span> </label> </li>
+					<li> <label class="rbtn">  <input type="radio" name="rates" value="Good"> </input> <span id="ratings"> Good </span> </label> </li>
+					<li> <label class="rbtn">  <input type="radio" name="rates" value="Excellent"> </input> <span id="ratings"> Excellent </span> </label> </li>
+				</ol>
+			
+				<input type="submit" value="Send" id="submitbtn" onclick="alertBox()">  			
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+					 
+					 function alertBox(){
+						var radioValue = document.getElementsByName("rates");
+						var found = 1;
+						for (var i = 0; i < radioValue.length; i++) {       
+							if (radioValue[i].checked) {
+								found=0;
+								var username=document.getElementById("name").value;
+								var commentTxt=document.getElementById("comments").value;
+								if(username==""){
+									alert("Your name is missing!");
+								}else if(commentTxt==""){
+									alert("Comment box is empty!");
+								}else{
+									alert( "Dear " + username+ ", Thank you very much for your feedback. You have rated our site as "+ radioValue[i].value +" and your comment was " + commentTxt);
+								}
+								break;
+							}
+							}if(found == 1){
+								alert("Please rate us!");
+						}
+					}
+	
+		</script>
+		<a href="#menu"> <img src="images/arrow3.png" id="top"> </a>
+		
+		<footer id="footer">
+			<label for="foot" id="foot"> Page Editor : Rashmi Liyanawadu <span id="page"> <a href="nature.html">  View page </a> </span> </label>
+			
+		</footer>
+	</body>
+</html>

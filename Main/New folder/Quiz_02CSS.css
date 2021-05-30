@@ -1,0 +1,52 @@
+#qHeading{
+	position:absolute;
+	background-color:#bd9874;
+	width:90%;
+	height:10%;
+	left:5%;
+	top:15%;
+	border:5px;
+	border-color:black;
+	border-bottom-style:dotted;
+	border-top-style:dotted;
+	font-family:Georgia;
+	font-size:20px;
+	padding-bottom:10px;
+
+}
+h1{
+	
+	text-align:center;
+	
+	
+}
+
+#quizbox{
+	position:absolute;
+	margin-top:15%;
+	left:15%;
+}
+.choice{
+	font-family:Georgia;
+	
+	
+}
+#footer{
+	position:absolute;
+	background-color:#bd9874;
+	padding:10px 0px 10px 0px; 
+	text-align:center;
+	color:white;
+	bottom:0%;
+	width:100%;
+}
+#styleImg{
+	position:absolute;
+	right:8%;
+	width:30%;
+	top:28%;
+}
+#pngImg{
+	position:relative;
+	width:100%;
+}

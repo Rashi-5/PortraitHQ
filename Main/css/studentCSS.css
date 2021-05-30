@@ -1,0 +1,114 @@
+#main{
+	position:relative;
+}
+
+.container_1{
+  position:absolute;
+  width:30%;
+  margin-top:4%;
+  left:15%;
+  
+}
+.image_1{
+	  position:relative;
+	  display: block;
+	  width:100%;
+	  height: auto;
+}
+.container_1:hover .overlay {
+  width:100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #bd9874;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+
+
+.container_2{
+  position:absolute;
+  width:30%;
+  margin-top:4%;
+  right:15%;
+  
+}
+.image_2{
+  position:relative;
+  display: block;
+  width:100%;
+  height: auto;
+}
+.container_2:hover .overlay {
+  width:100%;
+}
+.container_3{
+  position:absolute;
+  width:30%;
+  margin-top:40%;
+  left:15%;
+  
+}
+.image_3{
+	position:relative;
+  display: block;
+  width:100%;
+  height: auto;
+}
+.container_3:hover .overlay {
+  width:100%;
+}
+.container_4{
+  position:absolute;
+  width:30%;
+  margin-top:40%;
+  right:15%;
+  
+}
+.image_4{
+  position:relative;
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+.container_4:hover .overlay {
+  width:100%;
+}
+#footer{
+	margin-top:80%;
+	background-color:#bd9874;
+	padding:10px 0px 10px 0px; 
+	text-align:center;
+	color:white;
+}
+h1{
+	margin-top:8%;
+	text-align:center;
+	font-family:Georgia;
+	
+}
+/*styling inside the text in overlay*/
+.text {
+  color: black;
+  font-size: 20px;
+  font-family:Georgia;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#back2Top{
+	position:absolute;
+	top:90%;
+}
+

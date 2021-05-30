@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family:montserrat;
+}
+nav{
+  background: #262626;
+  height: 110px;
+  width: 100%;
+}
+label.logo img{
+  color: white;
+  width: 170px;
+  margin: 7px;
+  margin-left: 20px;
+}
+nav ul{
+  float: right;
+  margin-top: 30px;
+  padding-bottom: 35px;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 10px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #000000;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+body {
+  background-color: #000000;
+}
+
+.aboutme{
+	position:absolute;
+	right:0;
+	top:10px;
+	color: white;
+	font-family:century gothic;
+	padding:200px 60px;
+	font-size:18px;
+	opacity:1.0;
+
+}
+.aboutme p{
+	font-size: 18px;
+	line-height: 28px;
+	margin-bottom: 15px;
+}
+
+#gallery .image{
+	width: 29%;
+	margin: 2%;
+	float: left;
+}
+.image img{
+	width: 100%;
+	transition: all ease 0.6;
+	-webkit-transition: all ease 0.5;
+}
+.image img:hover{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transition: 500ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content{
+	right: 0;
+	top: 10px;
+	color: rgb(97, 97, 97);
+	font-family: century gothic;
+	padding: 0 60px;
+	font-size: 18px;
+	opacity: 1.0;
+}
+
+.content p{
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.content .title {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+hr {
+  margin:50px;
+  color:rgb(97, 97, 97);
+}
+
+#portarait{
+  padding-bottom: 500px;
+}
+
+#home {
+  background-image: url("images/background.jpg");
+  min-height: 400px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body{
+	position: absolute;
+	width: 1200;
+	right: 0;
+	top: 10;
+	color: white;
+	padding: 0 60px;
+}
+
+#landscape{
+  height: 1700px;
+}
+#wildlife{
+  height: 2000px;
+}
+#macro{
+  height: 1700px;
+}
+#portrait{
+  height: 2000px;
+}

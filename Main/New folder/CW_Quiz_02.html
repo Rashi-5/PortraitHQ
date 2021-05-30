@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portrait HQ - QUIZ</title>
+		<link rel='stylesheet' type='text/css' href='css/external1.css'>
+		<link rel='stylesheet' type='text/css' href='css/Quiz_02CSS.css'>
+		
+		
+		<script>
+		<!--defining variables-->
+			var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0,marks=0;
+		<!--creating arrays of questions, multiple choices and correct answers-->
+			var questions = [
+			    ["Question 01: ISO 100 is ________ sensitive to light than ISO 800.","3 stops more","3 stops less","2.5 stops more","1 stop less","B"],
+				["Question 02: \"The decisive moment\" is a quote attributed to.....","Mark Seliger","Joe McNally","Henri Cartier - Bresson","David Jay","C"],
+				["Question 03: Doubling flash power gains _______ .","One stop more of light","Half a stop of light","Decreases intensity but adds distance","Two stops more of light","A"],
+				["Question 04: What are the three most common professional camera formats ?","Hasselblad, Nikon, Canon","Nikon, APS, Medium format","Large format, 35mm, Medium format","35mm, APS, Canon","C"],
+				["Question 05: What is one of the most foundational rules of composition ?","Rule of thirds","Head in a cleanspot","Rule of fifths","Frame within a frame","A"],
+				["Question 06: Aperture is also known as,","F stop","Depth of field","Sync","Priority","A"],
+				["Question 07: In aperture priority mode you set the _____ and the camera sets the _____ .","Aperture / Focal length","Aperture / White balance","Aperture / F stop","Aperture / Shutterspeed","D"],
+				["Question 08: The colour of light is measured in,","Stops","Degrees kelvin","Sync","Bokeh","B"],
+				["Question 09: A ______ is something that can be placed between the sun and the subject to diffuse the light","Reflector","Scrim","Cutter","Flag","B"],
+				["Question 10: The three main metering modes available on most modern day DSLRs are,","70/30, Spot, Center weighted","TTL, 70/30, Spot","Spot, Center weighted, TTL","Spot, Center weighted, Evaluative","D"]
+			];  
+			function getQ(x){
+				return document.getElementById(x);
+			}
+			function renderQuestion(){
+				test = getQ("test");
+				if(pos >= questions.length){
+					test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct and "+marks+" marks for your test in  "+seconds+" seconds!</h2>";
+					getQ("test_status").innerHTML = "Test Completed";
+				
+					
+					pos = 0;
+					correct = 0;
+					return false;
+				}
+				getQ("test_status").innerHTML = "You have 5 minutes to complete this quiz!<br><br>Question "+(pos+1)+" of "+questions.length;
+				<!--setting positions to the elements in the array-->
+				question = questions[pos][0];
+				chA = questions[pos][1];
+				chB = questions[pos][2];
+				chC = questions[pos][3];
+				chD = questions[pos][4];
+				test.innerHTML = "<h3>"+question+"</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+				test.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+				test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+				
+			}
+				seconds = 0;
+
+			function elapse()
+				{
+					seconds += 1;
+					document.getElementById('time').value = seconds.toString();
+				}
+
+				setInterval(elapse, 1000);
+				
+			function checkAnswer(){
+				choices = document.getElementsByName("choices");
+				for(var i=0; i<choices.length; i++){
+					if(choices[i].checked){
+						choice = choices[i].value;
+						
+					}
+				}
+				if(choice == questions[pos][5]){
+					correct++;
+					marks=marks+2
+					document.getElementById("test").style.backgroundColor = "#c8f7d4";
+				}else{
+					marks=marks-1
+					document.getElementById("test").style.backgroundColor = "#ff8989";
+				}
+				pos++;
+				renderQuestion();
+			}
+			function timedRefresh(timeoutPeriod) {
+			setTimeout("location.reload(true);",timeoutPeriod);
+			}
+				
+			var seconds_left = 10;
+			window.addEventListener("load", renderQuestion, false);
+			window.onload = timedRefresh(300000);
+
+		</script>
+	</head>
+	<body>
+		
+		<div id="quizContainer">
+			<div id="styleImg"><img src="images/png.png" alt="" id="pngImg"></div>
+				<div id='menu'>
+				<!--navigation bar-->
+						<div id="menudiv">
+							<ul>
+								<li class='active'><a href="HOME.html">HOME</a></li>
+								<li class='menu'><a href="STORE.html">STORE</a></li>
+								<li class='menu'><a href="GALLERY.html">GALLERY</a></li>
+								<li class='menu'><a href="SITEMAP.html">SITEMAP</a></li>
+								<li class='menu'><a href="ABOUT.html" >ABOUT</a></li>
+							</ul>
+							<img src="images/logo2.png" id="logo" alt="logo-portraitHQ">
+						</div>
+				</div>
+				<!--social media icons-->
+				<div id="social">
+						<ol>
+							<a href="https://www.facebook.com/">
+							<li> <img src="images/facebook1.png" class="media" alt="facebook"> </li> </a>
+							<a href="https://www.instagram.com">
+							<li> <img src="images/insta.png" class="media" alt="instagram"> </li> </a>
+							<a href="https://www.pinterest.com">
+							<li> <img src="images/pinterest.png" class="media" alt="pinterest"> </li> </a>
+						</ol>
+				</div>
+			
+			
+				<div id="qHeading">
+					<h1>QUIZ</h1>
+				<!--linking javascript-->
+					<h2 id="test_status"></h2>
+					<div id="test"></div><br><br>
+				</div>
+			<div id="footer">METHMA PEIRIS - SE2019449</div>
+		</div>
+	</body>
+</html>
